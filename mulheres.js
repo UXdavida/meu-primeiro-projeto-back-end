@@ -28,7 +28,7 @@ async function criaMulher(request, response) {
        nome: request.body.nome,
        imagem: request.body.imagem,
        minibio: request.body.minibio,
-       citação: request.body.citação
+       citacao: request.body.citacao
     }) //essa constante recebe um objeto, por isso usa-se colchetes
 
 try {
@@ -56,8 +56,8 @@ async function corrigeMulher(request, response) {
             mulherEncontrada.minibio = request.body.minibio
         }
 
-        if (request.body.citação) {
-            mulherEncontrada = request.body.citação
+        if (request.body.citacao) {
+            mulherEncontrada = request.body.citacao
         }
 
         const mulherAtualizadaNoBancoDeDados = await mulherEncontrada.save()
